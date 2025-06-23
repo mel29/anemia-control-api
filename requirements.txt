@@ -1,0 +1,9 @@
+﻿fastapi
+uvicorn
+python-multipart
+Pillow
+numpy
+torch
+torchvision
+requests
+timm
