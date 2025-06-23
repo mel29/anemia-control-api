@@ -10,6 +10,14 @@ Este repositorio contiene el código base de nuestra API desarrollada en Python,
 - **requirements.txt:** Archivo plano con las librerías que utilizamos en nuestro proyecto.
 - **Dockerfile:** Contenedor de nuestra API para luego ser expuesta en Cloud Run.
 
+### Instalación de librerías
+
+Para instalar las librerías de `requirements.txt` se ejecuta el siguiente comando:
+
+```bash
+pip install -r requirements.txt
+```
+
 ### Ejecución de la API en Local
 
 Para ejecutar la API en local ejecuta el siguiente comando:
@@ -31,3 +39,5 @@ Luego, si todo salió bien en el paso anterior, desplegamos nuestro contenedor e
 ```bash
 gcloud run deploy anemia-control-api --image gcr.io/anemia-control-api/anemia-predict-api:v7 --platform managed --region us-central1 --allow-unauthenticated --port 8000 --cpu 1 --memory 2Gi --min-instances 0 --max-instances 1 --timeout 300s
 ```
+
+Este último comando nos dará la url base de nuestra API desplegada en Cloud Run.
